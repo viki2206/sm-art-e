@@ -5,37 +5,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NeshMart | Smart Grocery & Delivery</title>
-
-  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <!-- Header -->
   <header>
     <div class="container header-container">
-      <!-- Logo Left -->
-      <div class="logo">
-        <img src="neshmart-logo.png" alt="NeshMart Logo">
+
+      <!-- Left Side: Logo + Categories -->
+      <div class="logo-section">
+        <div class="logo">
+          <img src="neshmart-logo.png" alt="NeshMart Logo">
+        </div>
+
+        <div class="categories">
+          <a href="#"> <span>Home</span></a>
+          <a href="#"><img src="13.png" class="cat-icon" alt="Stores Icon"><span>Stores</span></a>
+          <a href="#"><img src="11.png" class="cat-icon" alt="All Categories Icon"><span>All Categories</span></a>
+        </div>
       </div>
+
+      <!-- Center: Search Bar -->
       <div class="group">
-      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path
-          d="M10,2A8,8,0,1,0,18,10,8.009,8.009,0,0,0,10,2Zm0,14A6,6,0,1,1,16,10,6.006,6.006,0,0,1,10,16Z" />
-        <path
-          d="M21.707,20.293,17.314,15.9a9.956,9.956,0,1,0-1.414,1.414l4.393,4.393a1,1,0,0,0,1.414-1.414Z" />
-      </svg>
-      <input class="input" type="search" placeholder="Search groceries...">
-    </div>
+        <input class="input" type="search" placeholder="Search groceries...">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M10,2A8,8,0,1,0,18,10,8.009,8.009,0,0,0,10,2Zm0,14A6,6,0,1,1,16,10,6.006,6.006,0,0,1,10,16Z"/>
+          <path d="M21.707,20.293,17.314,15.9a9.956,9.956,0,1,0-1.414,1.414l4.393,4.393a1,1,0,0,0,1.414-1.414Z"/>
+        </svg>
+      </div>
 
+      <!-- Right Side: Icons -->
+      <div class="header-right-icons">
+        <div class="icon-wrapper">
+          <a href="#" class="icon-badge">🔔<span class="badge">3</span></a>
+          <span class="icon-label">Notifications</span>
+        </div>
 
-      <!-- Navigation Right -->
-      <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="#">Customer</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-      </nav>
+        <div class="icon-wrapper">
+          <a href="signup.html"><img src="123.png" alt="Sign Up" class="custom-icon"></a>
+          <span class="icon-label">Sign Up</span>
+        </div>
+
+        <div class="icon-wrapper">
+          <a href="#">📦</a>
+          <span class="icon-label">Orders</span>
+        </div>
+
+        <div class="icon-wrapper">
+          <a href="#" class="icon-badge">🛒<span class="badge">2</span></a>
+          <span class="icon-label">Cart</span>
+        </div>
+      </div>
+
     </div>
   </header>
 
@@ -51,8 +74,10 @@
           <button class="ai-btn">AI Assistant 🤖</button>
         </div>
       </div>
-
-      
+      <div class="hero-right">
+        
+      </div>
+    </div>
   </section>
 
   <!-- Customer Features -->
@@ -103,6 +128,3 @@
 </body>
 
 </html>
-
-
-

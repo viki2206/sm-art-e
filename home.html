@@ -14,47 +14,60 @@
   <header>
     <div class="container header-container">
 
-      <!-- Left Side: Logo + Categories -->
+      <!-- Logo + Categories -->
       <div class="logo-section">
         <div class="logo">
           <img src="neshmart-logo.png" alt="NeshMart Logo">
         </div>
 
         <div class="categories">
-          <a href="#"> <span>Home</span></a>
+          <a href="home.html">><span>Home</span></a>
           <a href="#"><img src="13.png" class="cat-icon" alt="Stores Icon"><span>Stores</span></a>
-          <a href="#"><img src="11.png" class="cat-icon" alt="All Categories Icon"><span>All Categories</span></a>
+
+          <!-- All Categories Dropdown -->
+          <div style="position: relative;">
+            <a href="#" id="allCategoriesBtn">
+              <img src="11.png" class="cat-icon" alt="All Categories Icon"><span>All Categories</span>
+            </a>
+            <ul id="categoriesList" class="hidden">
+              <li><a href="#">Fruits</a></li>
+              <li><a href="vegetables.html">Vegetables</a></li>
+              <li><a href="#">Groceries</a></li>
+              <li><a href="#">Dairy</a></li>
+              <li><a href="#">Snacks</a></li>
+            </ul>
+
+          </div>
         </div>
       </div>
 
-      <!-- Center: Search Bar -->
+      <!-- Search Bar -->
       <div class="group">
         <input class="input" type="search" placeholder="Search groceries...">
         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M10,2A8,8,0,1,0,18,10,8.009,8.009,0,0,0,10,2Zm0,14A6,6,0,1,1,16,10,6.006,6.006,0,0,1,10,16Z"/>
-          <path d="M21.707,20.293,17.314,15.9a9.956,9.956,0,1,0-1.414,1.414l4.393,4.393a1,1,0,0,0,1.414-1.414Z"/>
+          <path
+            d="M10,2A8,8,0,1,0,18,10,8.009,8.009,0,0,0,10,2Zm0,14A6,6,0,1,1,16,10,6.006,6.006,0,0,1,10,16Z" />
+          <path
+            d="M21.707,20.293,17.314,15.9a9.956,9.956,0,1,0-1.414,1.414l4.393,4.393a1,1,0,0,0,1.414-1.414Z" />
         </svg>
       </div>
 
-      <!-- Right Side: Icons -->
+      <!-- Right-side Icons -->
       <div class="header-right-icons">
         <div class="icon-wrapper">
           <a href="#" class="icon-badge">🔔<span class="badge">3</span></a>
           <span class="icon-label">Notifications</span>
         </div>
-
         <div class="icon-wrapper">
           <a href="signup.html"><img src="123.png" alt="Sign Up" class="custom-icon"></a>
           <span class="icon-label">Sign Up</span>
         </div>
-
         <div class="icon-wrapper">
-          <a href="#">📦</a>
+          <a href="orders.html" class="icon-badge">📦</a>
           <span class="icon-label">Orders</span>
         </div>
-
         <div class="icon-wrapper">
-          <a href="#" class="icon-badge">🛒<span class="badge">2</span></a>
+          <a href="cart.html" class="icon-badge">🛒<span class="badge">2</span></a>
           <span class="icon-label">Cart</span>
         </div>
       </div>
@@ -71,12 +84,11 @@
 
         <!-- Smart AI Option -->
         <div class="smart-ai">
-          <button class="ai-btn">AI Assistant 🤖</button>
+         <button class="ai-btn" onclick="openAIModal()">VIGo Assistant 🤖</button>
+
         </div>
       </div>
-      <div class="hero-right">
-        
-      </div>
+      <div class="hero-right"></div>
     </div>
   </section>
 
@@ -98,6 +110,8 @@
           <p>Monitor your grocery delivery live until it reaches your doorstep.</p>
         </div>
       </div>
+
+      <!-- Right-side image -->
       <div class="features-right">
         <img src="veg.avif" alt="Fresh grocery basket with vegetables">
       </div>
@@ -125,6 +139,43 @@
       <p>© 2025 NeshMart | Vignesh R</p>
     </div>
   </footer>
+
+  <!-- AI Modal -->
+  <div id="aiModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeAIModal()">&times;</span>
+      <iframe id="aiFrame" src="ai.html"></iframe>
+    </div>
+  </div>
+ 
+
+
+  <!-- JS -->
+  <script>
+    function openAIModal() {
+      document.getElementById("aiModal").style.display = "flex";
+    }
+    function closeAIModal() {
+      document.getElementById("aiModal").style.display = "none";
+    }
+
+    const categoriesBtn = document.getElementById('allCategoriesBtn');
+    const categoriesList = document.getElementById('categoriesList');
+
+    categoriesBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      categoriesList.classList.toggle('hidden');
+    });
+
+    // Close the list if clicked outside
+    document.addEventListener('click', (e) => {
+      if (!categoriesBtn.contains(e.target) && !categoriesList.contains(e.target)) {
+        categoriesList.classList.add('hidden');
+      }
+    });
+  </script>
+  <script src="vegetables.js"></script>
+
 </body>
 
 </html>

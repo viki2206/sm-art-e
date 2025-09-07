@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Orders | NeshMart</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      font-family: 'Roboto', sans-serif;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+    .order-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .order-card:hover {
+      transform: translateY(-3px);
+    }
+    .order-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .order-item img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-right: 15px;
+    }
+    .order-info {
+      flex: 1;
+    }
+    .order-info h4 {
+      margin: 0;
+      font-size: 18px;
+    }
+    .order-status {
+      color: green;
+      font-weight: bold;
+    }
+    .btn-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+    .btn {
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    .btn-back { background: #bdc3c7; }
+    .btn-ai { background: #3498db; color: #fff; }
+    .btn-cart { background: #27ae60; color: #fff; }
+    .btn:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <h2>📦 My Orders</h2>
+
+    <div class="order-card">
+      <div class="order-item">
+        <img src="chicken.jpg" alt="Chicken Biryani">
+        <div class="order-info">
+          <h4>Chicken Biryani Ingredients</h4>
+          <p>Quantity: 4 Servings</p>
+        </div>
+        <span class="order-status">Delivered</span>
+      </div>
+    </div>
+
+    <div class="order-card">
+      <div class="order-item">
+        <img src="rice.jpg" alt="Rice">
+        <div class="order-info">
+          <h4>Rice (5kg)</h4>
+          <p>Quantity: 1 Pack</p>
+        </div>
+        <span class="order-status">On the Way 🚚</span>
+      </div>
+    </div>
+
+    <div class="btn-group">
+      <button class="btn btn-back" onclick="history.back()">⬅ Back</button>
+      <a href="ai.html"><button class="btn btn-ai">🤖 Back to AI</button></a>
+      <a href="cart.html"><button class="btn btn-cart">🛒 Go to Cart</button></a>
+    </div>
+  </div>
+</body>
+</html>

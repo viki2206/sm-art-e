@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.ai-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #2e7d32;
+}
+
+input {
+  padding: 10px;
+  margin: 8px 0;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  margin-top: 12px;
+  padding: 10px 20px;
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #43a047;
+}
+
+#ai-output {
+  margin-top: 20px;
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin: 6px 0;
+  padding: 6px;
+  background: #f1f8e9;
+  border-radius: 5px;
+}
+
+select {
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.suggestions {
+  width: 80%;
+  margin: 0 auto;
+  background: #e8f5e9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: left;
+  max-height: 150px;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 100;
+}
+
+.suggestion-item {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background: #c8e6c9;
+}

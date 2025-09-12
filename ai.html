@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🍲 NeshMart AI Assistant</title>
+  <title>Vigo Assistant 🤖</title>
   <link rel="stylesheet" href="ai.css">
 </head>
 <body>
@@ -11,15 +11,18 @@
     <h1>Vigo Assistant 🤖</h1>
     <p>Enter your dish and number of members</p>
 
-    <!-- Input with auto-suggest -->
-    <input type="text" id="dish" placeholder="Enter dish name (e.g., Chicken Biriyani)" oninput="showSuggestions()">
-    <div id="suggestions" class="suggestions"></div>
-    <input type="number" id="members" placeholder="No. of Members" min="1" value="4">
-    
+    <div class="input-group">
+      <input type="text" id="dish" placeholder="Enter dish name (e.g., Chicken Biriyani)" oninput="showSuggestions()">
+      <div id="suggestions" class="suggestions"></div>
+    </div>
+
+    <div class="input-group">
+      <input type="number" id="members" placeholder="No. of Members" min="1">
+    </div>
+
     <button onclick="getRecipe()">Get Ingredients</button>
     <button onclick="goBack()">⬅ Back</button>
 
-    <!-- Output -->
     <div id="ai-output"></div>
   </div>
 

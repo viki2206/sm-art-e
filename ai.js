@@ -645,6 +645,8 @@ function getRecipe() {
     return;
   }
 
+
+
   const [dishKey, dishData] = recipeEntry;
   let output = `<h2>Vigo 🤖 Suggests: ${dishKey.toUpperCase()} for ${members} members</h2>`;
   if(dishData.vegetables.length) output += buildCategoryCard("Vegetables", dishData.vegetables, members, false);
@@ -714,4 +716,11 @@ function checkout(dishKey, members){
   });
 
   document.getElementById("ai-output").innerHTML = html;
+}
+function goBack() {
+  // Option 1: reset inputs & output
+  document.getElementById("dish").value = "";
+  document.getElementById("members").value = "";
+  document.getElementById("ai-output").innerHTML = "";
+  document.getElementById("suggestions").innerHTML = "";
 }

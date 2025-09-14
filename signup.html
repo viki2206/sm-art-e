@@ -10,6 +10,7 @@
 </head>
 
 <body>
+  <!-- Header -->
   <header>
     <div class="container header-container">
       <div class="logo">
@@ -18,55 +19,61 @@
     </div>
   </header>
 
+  <!-- Signup Section -->
   <section class="signup-section">
     <div class="container signup-container">
       <h2>Create Your Account</h2>
       <form action="#" method="POST">
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <!-- Full Name -->
+        <div class="input-group">
+          <input type="text" id="name" name="name" required autocomplete="off">
+          <label class="user-label" for="name">Full Name</label>
         </div>
 
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <!-- Email -->
+        <div class="input-group">
+          <input type="email" id="email" name="email" required autocomplete="off">
+          <label class="user-label" for="email">Email</label>
         </div>
 
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" placeholder="Enter password" required>
+        <!-- Password -->
+        <div class="input-group">
+          <input type="password" id="password" name="password" required autocomplete="off">
+          <label class="user-label" for="password">Password</label>
         </div>
 
-        <div class="form-group">
-          <label for="confirm-password">Confirm Password</label>
-          <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm password" required>
+        <!-- Confirm Password -->
+        <div class="input-group">
+          <input type="password" id="confirm-password" name="confirm-password" required autocomplete="off">
+          <label class="user-label" for="confirm-password">Confirm Password</label>
         </div>
 
-        <!-- Dropdown Account Type -->
-        <div class="form-group">
-          <label for="account-type">Account Type</label>
-          <div class="custom-select">
-            <select id="account-type" name="account-type" required>
-              <option value="" disabled selected>Select account type</option>
-              <option value="customer">Customer 🛒</option>
-              <option value="farmer">Farmer 🚜</option>
-              <option value="shop-owner">Shop Owner 🏪</option>
-            </select>
-          </div>
+        <!-- Account Type -->
+        <div class="input-group account-type-group">
+          <select id="account-type" name="account-type" required>
+            <option value="" disabled selected hidden></option>
+            <option value="customer">Customer 🛒</option>
+            <option value="farmer">Farmer 🚜</option>
+            <option value="shop-owner">Shop Owner 🏪</option>
+          </select>
+          <label class="user-label" for="account-type">Account Type</label>
         </div>
 
+        <!-- Signup Button -->
         <button type="submit" class="signup-btn">Sign Up</button>
       </form>
 
-      <p class="login-link">Already have an account? <a href="home.html">Login here</a></p>
+      <!-- Link to login -->
+      <p class="login-link">Already have an account? <a href="login.html">Login here</a></p>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
       <p>© 2025 NeshMart | Vignesh R</p>
     </div>
   </footer>
 </body>
-
 </html>

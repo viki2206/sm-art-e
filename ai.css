@@ -146,3 +146,14 @@ select {
   background: #c8e6c9;
   font-weight: bold;
 }
+/* Back button special style */
+.back-btn {
+  background: #d32f2f;   /* red */
+  box-shadow: 0 3px 8px rgba(211, 47, 47, 0.3);
+}
+
+.back-btn:hover {
+  background: #f44336;
+  transform: scale(1.05);
+  box-shadow: 0 5px 12px rgba(211, 47, 47, 0.4);
+}

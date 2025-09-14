@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | NeshMart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <img src="neshmart-logo.png" alt="NeshMart Logo">
+      </div>
+    </div>
+  </header>
+
+  <!-- Login Section -->
+  <section class="login-section">
+    <div class="container login-container">
+      <h2>Login to Your Account</h2>
+      <form id="login-form" action="#" method="POST">
+
+        <!-- Email -->
+        <div class="input-group">
+          <input type="email" id="email" name="email" class="input" required autocomplete="off">
+          <label class="user-label" for="email">Email</label>
+        </div>
+
+        <!-- Password -->
+        <div class="input-group">
+          <input type="password" id="password" name="password" class="input" required autocomplete="off">
+          <label class="user-label" for="password">Password</label>
+        </div>
+
+        <!-- Account Type -->
+        <div class="input-group account-type-group">
+          <select id="account-type" name="account-type" class="input" required>
+            <option value="" disabled selected hidden></option>
+            <option value="customer">Customer 🛒</option>
+            <option value="farmer">Farmer 🚜</option>
+            <option value="shop-owner">Shop Owner 🏪</option>
+          </select>
+          <label class="user-label" for="account-type">Account Type</label>
+        </div>
+
+        <!-- Login Button -->
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+
+      <p class="signup-link">Don’t have an account? <a href="signup.html">Sign up here</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 NeshMart | Vignesh R</p>
+    </div>
+  </footer>
+
+  <!-- Sample Login Script -->
+  <script>
+    const loginForm = document.getElementById('login-form');
+
+    loginForm.addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent form from submitting
+
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const accountType = document.getElementById('account-type').value;
+
+      // Sample credentials
+      const sampleUser = {
+        email: "Vignesh",
+        password: "123",
+        accountType: "customer"
+      };
+
+      if(email === sampleUser.email && password === sampleUser.password && accountType === sampleUser.accountType) {
+        // Redirect to home.html without showing any message
+        window.location.href = "home.html";
+      } else {
+        alert("Invalid credentials! Try again.");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -696,7 +696,7 @@ function checkout(dishKey, members){
     {name:"Non-Veg", items: recipe.nonveg}
   ];
 
-  let html=`<h2>✅ Vigo 🤖: Order Confirmed!</h2>
+  let html=`<h2>✅ VIGo 🤖: Order Confirmed!</h2>
             <p>Your selected items for ${dishKey.toUpperCase()} (${members} members):</p>`;
 
   categories.forEach(cat=>{
@@ -724,3 +724,4 @@ function goBack() {
   document.getElementById("ai-output").innerHTML = "";
   document.getElementById("suggestions").innerHTML = "";
 }
+
